@@ -1,0 +1,31 @@
+{
+  "name": "item",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "image"
+    },
+    "createAt": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "histories": {
+      "type": "hasMany",
+      "model": "history",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

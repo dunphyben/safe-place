@@ -1,0 +1,31 @@
+{
+  "name": "place",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "createdAt": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "items": {
+      "type": "hasMany",
+      "model": "item",
+      "foreignKey": ""
+    },
+    "histories": {
+      "type": "hasMany",
+      "model": "history",
+      "foreignKey": "",
+      "through": "item"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

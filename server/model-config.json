@@ -25,5 +25,17 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "place": {
+    "dataSource": "db",
+    "public": true
+  },
+  "item": {
+    "dataSource": "db",
+    "public": true
+  },
+  "history": {
+    "dataSource": "db",
+    "public": false
   }
 }

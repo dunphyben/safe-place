@@ -1,0 +1,19 @@
+{
+  "name": "history",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "isWithdraw": {
+      "type": "boolean",
+      "required": true
+    },
+    "createAt": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
