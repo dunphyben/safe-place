@@ -27,6 +27,11 @@ describe('Place Views', function() {
 		it("lists all of the places (Place.name) in the myPlaces view", function() {
 
 		});
+		describe('View Place', function() {
+			it("takes me to the Place.items when onClick(Place.name) from the My Places list view", function() {
+
+			});
+		});
 	});
 
 	describe('Place.items', function() {
