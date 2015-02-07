@@ -95,6 +95,9 @@ describe('Item', function() {
 			testItem.description.should.equal("defaultImage");
 			testItem.image.should.equal("");
 		});
+		it("sets the aspect ratio for the image to 1.5\(x\) x 1\(y\))", function() {
+
+		});
 	});
 
 
