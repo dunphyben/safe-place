@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "pretest": "eslint ."
+    "pretest": "eslint .",
+    "start": "node server/server.js"
   },
   "dependencies": {
     "compression": "^1.0.3",
     "errorhandler": "^1.1.1",
     "loopback": "^2.8.0",
     "loopback-boot": "^2.4.0",
+    "loopback-connector-mongodb": "^1.6.0",
     "loopback-datasource-juggler": "^2.7.0",
     "serve-favicon": "^2.0.1"
   },
@@ -17,8 +19,14 @@
     "loopback-explorer": "^1.1.0"
   },
   "devDependencies": {
+    "chai": "^1.10.0",
     "eslint": "^0.13.0",
-    "jshint": "^2.5.6"
+    "gulp": "^3.8.10",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nodemon": "^1.0.5",
+    "gulp-stylus": "^2.0.0",
+    "jshint": "^2.5.6",
+    "mocha": "^2.1.0"
   },
   "repository": {
     "type": "",
