@@ -1,0 +1,35 @@
+navy = #073464
+#sort-menu
+  background navy
+  box-shadow 0 3px 4px lighten(black, 70%)
+
+  &:after
+    h = 30px
+    content ''
+    display block
+    position absolute
+    bottom -height
+    right 10px
+    width 30px
+    height h
+    background navy
+    border-radius 0 0 10px 10px
+
+  ul
+    display table
+    width 100%
+
+  li
+    display table-cell
+    vertical-align middle
+
+  a
+    padding 10px 0
+    display block
+    font-size 20px
+    font-weight 300
+
+  img
+    height 25px
+    margin 0 auto
+

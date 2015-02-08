@@ -3,12 +3,12 @@ normalize()
 box-sizing-reset()
 @require 'utils/consts'
 @require 'utils/functions'
+@require 'utils/common'
 
 helvetica = 'Helvetica Neue', Helvetica, Arial, sans-serif
 
 body
   height 667px
-  width 350px
   overflow hidden
   padding 0
   margin 0
@@ -16,4 +16,5 @@ body
 
 // Menu Bar
 @require 'menu-bar/MenuBar'
+@require 'all-items/sort-menu/SortMenu'
 @require 'nav-bar/nav.styl'

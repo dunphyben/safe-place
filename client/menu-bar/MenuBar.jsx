@@ -21,7 +21,7 @@ var MenuBar = React.createClass({
 
   render: function() {
     return (
-      <ul id='menu-bar' className='justify'>
+      <ul id='menu-bar' className='horizontal-menu'>
         <li>
           <a
             id='1'
