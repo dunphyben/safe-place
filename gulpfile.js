@@ -97,12 +97,13 @@ gulp.task('jsx', function() {
 });
 
 gulp.task('jsx-watch', function() {
-  return gulp.src(paths.jsx)
-    .pipe(watch(paths.jsx))
+    watch(paths.jsx, {
+      verbose: true
+    })
     .pipe(react({
       harmony: true
     }))
-    .pipe(gulp.dest('./client'));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('bundle', function(cb) {
@@ -117,7 +118,8 @@ function browserifyCommon(cb) {
     basedir: __dirname,
     debug: true,
     cache: {},
-    packageCache: {}
+    packageCache: {},
+    fullPaths: true
   };
 
   var b = browserify(config);
