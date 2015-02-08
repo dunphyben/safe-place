@@ -20,13 +20,12 @@ var MenuBar = React.createClass({
 
   render: function() {
     return (
-      <ul id='main-nav' className='justify'>
+      <ul id='menu-bar' className='justify'>
         <li>
-          <a id={1} className='icon-button' onClick={this.handleClick}>
+          <a id={1} className='icon-button selected' onClick={this.handleClick}>
             <img src='/images/deposit-item-unselected@3x.png' />
-            <img
-              src='/images/deposit-item-selected@3x.png'
-              className='selected' />
+            <img src='/images/deposit-item-selected@3x.png'
+                 className='selected' />
             <span>Deposit Item</span>
           </a>
         </li>

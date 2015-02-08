@@ -1,0 +1,60 @@
+light-gray = #F5F5F5
+txt-gray = #A8A8A8
+
+// Quick ul css reset
+ul
+ol
+  list-style none
+  padding 0
+  margin 0
+
+#menu-bar
+  border-top 1px solid txt-gray
+  max-height 100px
+  background light-gray
+  color white
+  position absolute
+  bottom 0
+  left 0
+  right 0
+
+  li
+    width 25%
+  a
+    display block
+    width 100%
+    padding 10px 0
+    span
+      color txt-gray
+      line-height 1
+      font-weight 300
+      font-size 12px
+
+.icon-button
+  text-align center
+
+  img.selected
+    display none
+
+  &.selected
+    img
+      display none
+    img.selected
+      display block
+
+  span
+  img
+    display block
+
+  img
+    width auto
+    height 30px
+    margin 0 auto
+    margin-bottom 5px
+
+
+.justify
+  text-align center
+  li
+    display inline-block
+

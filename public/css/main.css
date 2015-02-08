@@ -2,6 +2,7 @@ body {
   height: 667px;
   width: 350px;
   overflow: hidden;
+<<<<<<< HEAD
   padding: 0;
   margin: 0;
 }
@@ -9,4 +10,65 @@ nav.nav {
   height: 11.244vh;
   width: 100vw;
   overflow: auto;
+=======
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#menu-bar {
+  border-top: 1px solid #a8a8a8;
+  max-height: 100px;
+  background: #f5f5f5;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#menu-bar li {
+  width: 25%;
+}
+#menu-bar a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+#menu-bar a span {
+  color: #a8a8a8;
+  line-height: 1;
+  font-weight: 300;
+  font-size: 12px;
+}
+.icon-button {
+  text-align: center;
+}
+.icon-button img.selected {
+  display: none;
+}
+.icon-button.selected img {
+  display: none;
+}
+.icon-button.selected img.selected {
+  display: block;
+}
+.icon-button span,
+.icon-button img {
+  display: block;
+}
+.icon-button img {
+  width: auto;
+  height: 30px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+.justify {
+  text-align: center;
+}
+.justify li {
+  display: inline-block;
+>>>>>>> Add menu bar style
 }
