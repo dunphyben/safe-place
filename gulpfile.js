@@ -4,25 +4,25 @@ var gulp = require('gulp'),
     // ## Style
     concat = require('gulp-concat'),
     stylus = require('gulp-stylus'),
-    swiss  = require('kouto-swiss'),
+    swiss = require('kouto-swiss'),
 
     // ## Bundle
     browserify = require('browserify'),
-    watchify   = require('watchify'),
-    envify     = require('envify/custom'),
+    watchify = require('watchify'),
+    envify = require('envify/custom'),
     bundleName = require('vinyl-source-stream'),
 
     // ## utils
     plumber = require('gulp-plumber'),
-    watch   = require('gulp-watch'),
-    debug   = require('debug')('sp:gulp'),
+    watch = require('gulp-watch'),
+    debug = require('debug')('sp:gulp'),
 
     // ## React
     react = require('gulp-react'),
 
     // serve
     nodemon = require('gulp-nodemon'),
-    lr      = require('gulp-livereload');
+    lr = require('gulp-livereload');
 
 var reloadDelay = 7000;
 
