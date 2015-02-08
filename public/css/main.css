@@ -196,18 +196,8 @@ body {
   height: 667px;
   width: 350px;
   overflow: hidden;
-<<<<<<< HEAD
   padding: 0;
   margin: 0;
-}
-nav.nav {
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  height: 11.244vh;
-  width: 100vw;
-  overflow: auto;
-=======
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 ul,
@@ -267,20 +257,9 @@ ol {
 }
 .justify li {
   display: inline-block;
->>>>>>> Add menu bar style
 }
-.nav_button {
-  display: inline-block;
-  float: left;
-  overflow: hidden;
-  width: 32.5%;
-  margin: 0 0.4166666666667%;
-}
-.nav_title {
-  display: inline-block;
-  float: left;
-  overflow: hidden;
-  width: 32.5%;
-  margin: 0 0.4166666666667%;
-  color: #00f;
+nav.nav {
+  height: 11.244vh;
+  width: 100vw;
+  overflow: auto;
 }
