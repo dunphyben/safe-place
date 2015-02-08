@@ -7,7 +7,7 @@ var NavBar = React.createClass({displayName: "NavBar",
   getInitialState: function() {
     debug('init');
     return {
-      title: 'my places',
+      title: 'My Places',
       showBackButton: false
     };
   },
@@ -23,11 +23,13 @@ var NavBar = React.createClass({displayName: "NavBar",
     });
 
     return (
-      React.createElement("nav", null, 
+      React.createElement("nav", {className: "nav"}, 
         React.createElement("div", {className: buttonClass }, 
           React.createElement("p", null, "back")
         ), 
-        React.createElement("h1", null, title )
+        React.createElement("div", {className: "nav_title"}, 
+          React.createElement("p", null, title )
+        )
       )
     );
   }

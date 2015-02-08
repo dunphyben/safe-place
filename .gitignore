@@ -1,4 +1,4 @@
 node_modules
 *.log
 *.DS_Store
-public/js/bundle
+public/js/bundle.js

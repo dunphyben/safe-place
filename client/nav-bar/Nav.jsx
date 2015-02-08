@@ -7,7 +7,7 @@ var NavBar = React.createClass({
   getInitialState: function() {
     debug('init');
     return {
-      title: 'my places',
+      title: 'My Places',
       showBackButton: false
     };
   },
@@ -23,11 +23,13 @@ var NavBar = React.createClass({
     });
 
     return (
-      <nav>
+      <nav className='nav'>
         <div className={ buttonClass }>
           <p>back</p>
         </div>
-        <h1>{ title }</h1>
+        <div className='nav_title'>
+          <p>{ title }</p>
+        </div>
       </nav>
     );
   }
