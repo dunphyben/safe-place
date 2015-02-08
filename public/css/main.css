@@ -225,7 +225,6 @@ ol {
   padding: 10px 0;
 }
 #menu-bar a span {
-  color: #a8a8a8;
   line-height: 1;
   font-weight: 300;
   font-size: 12px;
@@ -233,18 +232,24 @@ ol {
 .icon-button {
   text-align: center;
 }
-.icon-button img.selected {
-  display: none;
-}
 .icon-button.selected img {
   display: none;
 }
 .icon-button.selected img.selected {
   display: block;
 }
+.icon-button.selected span {
+  color: #c1b183;
+}
+.icon-button img.selected {
+  display: none;
+}
 .icon-button span,
 .icon-button img {
   display: block;
+}
+.icon-button span {
+  color: #a8a8a8;
 }
 .icon-button img {
   width: auto;

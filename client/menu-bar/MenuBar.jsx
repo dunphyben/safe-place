@@ -43,22 +43,22 @@ var MenuBar = React.createClass({
         </li>
         <li>
           <a id='2' className={this.getClassNames('2')} onClick={this.handleClick}>
-            <img src='/images/all-items-unselected@3x.png' />
-            <img src='/images/all-items-selected@3x.png' className='selected' />
+            <img src='/images/my-places-unselected@3x.png' />
+            <img src='/images/my-places-selected@3x.png' className='selected' />
             <span>My Places</span>
           </a>
         </li>
         <li>
           <a id='3' className={this.getClassNames('3')} onClick={this.handleClick}>
-            <img src='/images/history-unselected@3x.png' />
-            <img src='/images/history-selected@3x.png' className='selected' />
+            <img src='/images/all-items-unselected@3x.png' />
+            <img src='/images/all-items-selected@3x.png' className='selected' />
             <span>All Items</span>
           </a>
         </li>
         <li>
           <a id='4' className={this.getClassNames('4')} onClick={this.handleClick}>
-            <img src='/images/my-places-unselected@3x.png' />
-            <img src='/images/my-places-selected@3x.png' className='selected' />
+            <img src='/images/history-unselected@3x.png' />
+            <img src='/images/history-selected@3x.png' className='selected' />
             <span>History</span>
           </a>
         </li>

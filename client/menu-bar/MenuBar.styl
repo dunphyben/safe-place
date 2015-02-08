@@ -1,5 +1,6 @@
 light-gray = #F5F5F5
 txt-gray = #A8A8A8
+gold = #C1B183
 
 // Quick ul css reset
 ul
@@ -25,7 +26,6 @@ ol
     width 100%
     padding 10px 0
     span
-      color txt-gray
       line-height 1
       font-weight 300
       font-size 12px
@@ -33,18 +33,23 @@ ol
 .icon-button
   text-align center
 
-  img.selected
-    display none
-
   &.selected
     img
       display none
     img.selected
       display block
+    span
+      color gold
+
+  img.selected
+    display none
 
   span
   img
     display block
+
+  span
+    color txt-gray
 
   img
     width auto

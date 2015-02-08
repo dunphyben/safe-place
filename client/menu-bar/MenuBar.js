@@ -43,22 +43,22 @@ var MenuBar = React.createClass({displayName: "MenuBar",
         ), 
         React.createElement("li", null, 
           React.createElement("a", {id: "2", className: this.getClassNames('2'), onClick: this.handleClick}, 
-            React.createElement("img", {src: "/images/all-items-unselected@3x.png"}), 
-            React.createElement("img", {src: "/images/all-items-selected@3x.png", className: "selected"}), 
+            React.createElement("img", {src: "/images/my-places-unselected@3x.png"}), 
+            React.createElement("img", {src: "/images/my-places-selected@3x.png", className: "selected"}), 
             React.createElement("span", null, "My Places")
           )
         ), 
         React.createElement("li", null, 
           React.createElement("a", {id: "3", className: this.getClassNames('3'), onClick: this.handleClick}, 
-            React.createElement("img", {src: "/images/history-unselected@3x.png"}), 
-            React.createElement("img", {src: "/images/history-selected@3x.png", className: "selected"}), 
+            React.createElement("img", {src: "/images/all-items-unselected@3x.png"}), 
+            React.createElement("img", {src: "/images/all-items-selected@3x.png", className: "selected"}), 
             React.createElement("span", null, "All Items")
           )
         ), 
         React.createElement("li", null, 
           React.createElement("a", {id: "4", className: this.getClassNames('4'), onClick: this.handleClick}, 
-            React.createElement("img", {src: "/images/my-places-unselected@3x.png"}), 
-            React.createElement("img", {src: "/images/my-places-selected@3x.png", className: "selected"}), 
+            React.createElement("img", {src: "/images/history-unselected@3x.png"}), 
+            React.createElement("img", {src: "/images/history-selected@3x.png", className: "selected"}), 
             React.createElement("span", null, "History")
           )
         )
