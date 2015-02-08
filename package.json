@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
+    "prepublish": "browserify client.js -o public/js/bundle.js",
     "pretest": "eslint .",
     "test": "echo \"no tests\"",
     "start": "node server/server.js"
   },
   "dependencies": {
+    "browserify": "^8.1.3",
     "compression": "^1.0.3",
     "debug": "^2.1.1",
     "errorhandler": "^1.1.1",
@@ -24,7 +26,6 @@
     "loopback-explorer": "^1.1.0"
   },
   "devDependencies": {
-    "browserify": "^8.1.3",
     "chai": "^1.10.0",
     "envify": "^3.2.0",
     "eslint": "^0.13.0",
