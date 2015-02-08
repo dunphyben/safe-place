@@ -11,12 +11,9 @@
   },
   "parse": {
   },
-  "routes": {
-    "loopback#status": {
-      "paths": "/"
-    }
-  },
+  "routes": {},
   "files": {
+    "loopback#static": { "params": "public" }
   },
   "final": {
     "loopback#urlNotFound": {}
