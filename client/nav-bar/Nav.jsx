@@ -12,8 +12,14 @@ var NavBar = React.createClass({
     };
   },
 
-  render: function() {
+  _handleBackClick: function() {
+    debug('back button');
+    this.state({
+      showBackButton: !this.state.showBackButton
+    });
+  },
 
+  render: function() {
     var title = this.state.title,
         showBackButton = this.state.showBackButton;
 
@@ -24,8 +30,10 @@ var NavBar = React.createClass({
 
     return (
       <nav className='nav'>
-        <div className={ buttonClass }>
-          <p>back</p>
+        <div
+          className={ buttonClass }
+          onClick={ this._handleBackClick }>
+          <img src='images/chevron.png' />
         </div>
         <div className='nav_title'>
           <p>{ title }</p>

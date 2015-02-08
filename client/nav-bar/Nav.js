@@ -12,8 +12,14 @@ var NavBar = React.createClass({displayName: "NavBar",
     };
   },
 
-  render: function() {
+  _handleBackClick: function() {
+    debug('back button');
+    this.state({
+      showBackButton: !this.state.showBackButton
+    });
+  },
 
+  render: function() {
     var title = this.state.title,
         showBackButton = this.state.showBackButton;
 
@@ -24,8 +30,10 @@ var NavBar = React.createClass({displayName: "NavBar",
 
     return (
       React.createElement("nav", {className: "nav"}, 
-        React.createElement("div", {className: buttonClass }, 
-          React.createElement("p", null, "back")
+        React.createElement("div", {
+          className: buttonClass, 
+          onClick:  this._handleBackClick}, 
+          React.createElement("img", {src: "images/chevron.png"})
         ), 
         React.createElement("div", {className: "nav_title"}, 
           React.createElement("p", null, title )
