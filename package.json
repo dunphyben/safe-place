@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "prepublish": "browserify client.js -o public/js/bundle.js",
+    "prepublish": "browserify client/Routes.js -o public/js/bundle.js",
     "pretest": "eslint .",
     "test": "echo \"no tests\"",
     "start": "node server/server.js"
@@ -20,6 +20,8 @@
     "loopback-datasource-juggler": "^2.7.0",
     "react": "^0.12.2",
     "react-router": "^0.11.6",
+    "rx-flux": "git://github.com/r3dm/rx-flux.git",
+    "rx-react": "^0.1.0",
     "serve-favicon": "^2.0.1"
   },
   "optionalDependencies": {

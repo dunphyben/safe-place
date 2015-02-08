@@ -1,22 +1,18 @@
 var React = require('react/addons'),
+
+    StateStreamMixin = require('rx-react').StateStreamMixin,
+    NavStore = require('./Store'),
+    NavActions = require('./Actions'),
+
     cx = React.addons.classSet,
     debug = require('debug')('sp:nav:comp');
 
 var NavBar = React.createClass({displayName: "NavBar",
+  mixins: [StateStreamMixin],
 
-  getInitialState: function() {
+  getStateStream: function() {
     debug('init');
-    return {
-      title: 'My Places',
-      showBackButton: false
-    };
-  },
-
-  _handleBackClick: function() {
-    debug('back button');
-    this.state({
-      showBackButton: !this.state.showBackButton
-    });
+    return NavStore;
   },
 
   render: function() {
@@ -32,7 +28,7 @@ var NavBar = React.createClass({displayName: "NavBar",
       React.createElement("nav", {className: "nav"}, 
         React.createElement("div", {
           className: buttonClass, 
-          onClick:  this._handleBackClick}, 
+          onClick:  NavActions.goBack}, 
           React.createElement("img", {src: "images/chevron.png"})
         ), 
         React.createElement("div", {className: "nav_title"}, 
