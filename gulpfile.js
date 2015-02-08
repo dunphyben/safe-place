@@ -1,3 +1,4 @@
+process.env.DEBUG = process.env.DEBUG || 'sp:gulp';
 var gulp = require('gulp'),
 
     // ## Style
@@ -22,36 +23,31 @@ var gulp = require('gulp'),
     // serve
     nodemon = require('gulp-nodemon');
 
-var watching = false;
 var reloadDelay = 7000;
 
 var paths = {
-  main: './client/app.js',
-  jsx: './clients/**/**.jsx',
-  stylusMain: './clients/app.styl',
-  stylusAll: './clients/**/*.styl',
+  main: './client/Routes.js',
+  jsx: './client/**/*.jsx',
+  stylusMain: './client/app.styl',
+  stylusAll: './client/**/*.styl',
   css: './public/css/',
   server: './server/server.js',
   serverIgnore: [
     'gulpfile.js',
     'public/',
-    'node_modules/'
+    'node_modules/',
+    'client/'
   ],
   publicJs: './public/js'
 };
 
 gulp.task('default', [
-  'setWatch',
   'jsx-watch',
   'bundle',
   'stylus',
   'serve',
   'watch'
 ]);
-
-gulp.task('setWatch', function() {
-  watching = true;
-});
 
 gulp.task('serve', function(cb) {
   var called = false;
@@ -61,7 +57,7 @@ gulp.task('serve', function(cb) {
     ignore: paths.serverIgnore,
     env: {
       'NODE_ENV': 'development',
-      'DEBUG': 'r3dm:*'
+      'DEBUG': 'sp:*'
     }
   })
     .on('start', function() {
@@ -72,15 +68,6 @@ gulp.task('serve', function(cb) {
           cb();
         }, reloadDelay);
       }
-    })
-    .on('restart', function(files) {
-      if (files) {
-        debug('Files that changed: ', files);
-      }
-      setTimeout(function() {
-        debug('server restart delay');
-        // reload();
-      }, reloadDelay);
     });
 });
 
@@ -102,21 +89,20 @@ gulp.task('watch', function() {
 });
 
 gulp.task('jsx', function() {
-  return gulp.src('./components/**/*.jsx')
+  return gulp.src(paths.jsx)
     .pipe(react({
       harmony: true
     }))
-    .pipe(gulp.dest('./components'));
+    .pipe(gulp.dest('./client'));
 });
 
 gulp.task('jsx-watch', function() {
   return gulp.src(paths.jsx)
-    .pipe(plumber())
     .pipe(watch(paths.jsx))
     .pipe(react({
       harmony: true
     }))
-    .pipe(gulp.dest('./components'));
+    .pipe(gulp.dest('./client'));
 });
 
 gulp.task('bundle', function(cb) {
@@ -127,18 +113,12 @@ function browserifyCommon(cb) {
   cb = cb || noop;
   var config;
 
-  if (watching) {
-    config = {
-      basedir: __dirname,
-      debug: true,
-      cache: {},
-      packageCache: {}
-    };
-  } else {
-    config = {
-      basedir: __dirname
-    };
-  }
+  config = {
+    basedir: __dirname,
+    debug: true,
+    cache: {},
+    packageCache: {}
+  };
 
   var b = browserify(config);
   b.transform(envify({
@@ -148,6 +128,7 @@ function browserifyCommon(cb) {
   debug('Watching bundle');
   b = watchify(b);
   b.on('update', function() {
+    debug('bundling updating');
     bundleItUp(b);
   });
 
@@ -157,12 +138,12 @@ function browserifyCommon(cb) {
   }*/
 
   b.add(paths.main);
+  debug('Bundling');
   bundleItUp(b);
   cb();
 }
 
 function bundleItUp(b) {
-  debug('Bundling');
   return b.bundle()
     .pipe(plumber())
     .pipe(bundleName('bundle.js'))

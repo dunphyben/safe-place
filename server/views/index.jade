@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    base(href='/')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title Safe Place
+    base(href='/', target='_blank')
+    link(
+      rel='stylesheet'
+      type='text/css'
+      href='css/main.css'
+      charset='utf-8')
+    // link(rel='icon'
+      type='image/png'
+      href='/images/favicon.ico')
+    meta(
+      name='viewport'
+      content='width=device-width, initial-scale=1, user-scalable=no')
+    meta(
+      name='description'
+      content='A team of web professionals ready to realize your ideas. We are a software consultancy always seeking challenges')
+  body
+    //- rendered app attached at html
+    //- app context are attached to state
+    #app!= html
+    script(src='js/bundle.js')

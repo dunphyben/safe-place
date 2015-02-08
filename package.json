@@ -11,10 +11,13 @@
     "compression": "^1.0.3",
     "debug": "^2.1.1",
     "errorhandler": "^1.1.1",
+    "jade": "^1.9.2",
     "loopback": "^2.8.0",
     "loopback-boot": "^2.4.0",
     "loopback-connector-mongodb": "^1.6.0",
     "loopback-datasource-juggler": "^2.7.0",
+    "react": "^0.12.2",
+    "react-router": "^0.11.6",
     "serve-favicon": "^2.0.1"
   },
   "optionalDependencies": {

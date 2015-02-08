@@ -7,6 +7,13 @@ var app = module.exports = loopback();
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname);
 
+app.set('views', 'server/views');
+app.set('view engine', 'jade');
+
+app.get('/', function(req, res) {
+  return res.render('index');
+});
+
 app.start = function() {
   // start the web server
   return app.listen(function() {
