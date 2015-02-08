@@ -2,7 +2,7 @@ var React = require('react/addons'),
     cx = React.addons.classSet,
     debug = require('debug')('sp:nav:comp');
 
-var NavBar = React.createClass({
+var NavBar = React.createClass({displayName: "NavBar",
 
   getInitialState: function() {
     debug('init');
@@ -23,12 +23,12 @@ var NavBar = React.createClass({
     });
 
     return (
-      <nav>
-        <div className={ buttonClass }>
-          <p>back</p>
-        </div>
-        <h1>{ title }</h1>
-      </nav>
+      React.createElement("nav", null, 
+        React.createElement("div", {className: buttonClass }, 
+          React.createElement("p", null, "back")
+        ), 
+        React.createElement("h1", null, title )
+      )
     );
   }
 });
