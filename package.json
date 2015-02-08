@@ -25,6 +25,7 @@
     "chai": "^1.10.0",
     "envify": "^3.2.0",
     "eslint": "^0.13.0",
+    "eslint-plugin-react": "^1.2.1",
     "grunt": "^0.4.5",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.4.3",
