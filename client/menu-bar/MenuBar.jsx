@@ -21,8 +21,12 @@ var MenuBar = React.createClass({
     // TODO...
   },
 
+  /**
+   * TODO...
+   * We set the currently selected state just fine, but we need to navigate to
+   * the correct view when clicked.
+   */
   handleClick: function(e) {
-    console.log(e.currentTarget.id);
     this.setState({ currentlySelected: e.currentTarget.id });
   },
 
