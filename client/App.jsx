@@ -7,8 +7,8 @@ var React = require('react'),
 
 var App = React.createClass({
 
-  // TODO: SortMenu will need to be moved within the AllItems component
   render: function() {
+    // TODO: SortMenu will need to be moved within the AllItems component
     return (
       <main>
         <NavBar />

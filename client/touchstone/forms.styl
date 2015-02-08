@@ -1,0 +1,153 @@
+.field-item
+  & > .item-inner
+    -webkit-align-items flex-start
+    align-items flex-start
+
+.field-label
+  color #666666
+  width 35%
+
+.field-control
+  position relative
+  width 65%
+
+.field
+  background none transparent
+  border 0 none
+  box-shadow none
+  color #000000
+  display inline-block
+  line-height 1
+  outline none
+  min-height 20px
+  margin 0
+  padding 0
+  width 100%
+  -webkit-appearance none
+  &::-moz-placeholder
+    color #c7c7cd
+    opacity 1
+  &:-ms-input-placeholder
+    color #c7c7cd
+  &::-webkit-input-placeholder
+    color #c7c7cd
+  &.one-line
+    overflow-x auto
+    white-space nowrap
+
+div
+  &.field
+    -webkit-touch-callout default
+    -webkit-user-select text
+  &.select-field
+    -webkit-touch-callout default
+    -webkit-user-select text
+
+label
+  &.item-content
+    position relative
+    &:after
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      content " "
+      margin -12px -15px
+      padding 12px 15px
+
+.field-note
+  padding-left 7px
+  position relative
+  &:after
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    content " "
+    margin -12px -15px
+    padding 12px 15px
+
+.field-note-over
+  position absolute
+  right 15px
+
+.field-item-text-sm
+  .field
+    font-size .9em
+
+.field-item-text-xs
+  .field
+    font-size .8em
+
+.select-field
+  background none transparent
+  border 0 none
+  box-shadow none
+  display inline-block
+  line-height 1
+  min-height 20px
+  margin 0
+  padding 0
+  color #000000
+  font-size inherit
+  font-family "Helvetica Neue", Helvetica, Arial, sans-serif
+  line-height 1.4
+  outline none
+  width 100%
+  -webkit-appearance none
+  -moz-appearance none
+  appearance none
+  &::-moz-placeholder
+    color #c7c7cd
+    opacity 1
+  &:-ms-input-placeholder
+    color #c7c7cd
+  &::-webkit-input-placeholder
+    color #c7c7cd
+  &.one-line
+    overflow-x auto
+    white-space nowrap
+  &:-moz-focusring
+    color transparent
+    text-shadow 0 0 0 #000
+  &:focus
+    & + .select-field-indicator
+      .select-field-indicator-arrow
+        border-top-color #666666
+
+.select-field-indicator,
+.select-field-indicator-arrow
+  bottom 0
+  display inline-block
+  right 0
+  top 0
+  position absolute
+  pointer-events none
+
+.select-field-indicator
+  border-bottom-right-radius 6px
+  border-top-right-radius 6px
+  background-color white
+  width 1.5em
+
+.select-field-indicator-arrow
+  top 50%
+  &:before
+    border-bottom-color #000000
+    border-top-width 0
+    margin-top -6px
+  &:after
+    border-top-color #000000
+    border-bottom-width 0
+    margin-bottom -6px
+
+.select-field-indicator-arrow:before,
+.select-field-indicator-arrow:after
+  width 0
+  height 0
+  border 4px solid transparent
+  content ""
+  position absolute
+  right 2px
