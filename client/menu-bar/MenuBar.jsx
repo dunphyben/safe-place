@@ -6,7 +6,7 @@ var MenuBar = React.createClass({
    * The 'Deposit Item' menu is selected initially.
    */
   getInitialState: function() {
-    return { currentlySelected: 1 };  
+    return { currentlySelected: 1 };
   },
 
   navigateTo: function() {
@@ -24,7 +24,9 @@ var MenuBar = React.createClass({
         <li>
           <a id={1} className='icon-button' onClick={this.handleClick}>
             <img src='/images/deposit-item-unselected@3x.png' />
-            <img src='/images/deposit-item-selected@3x.png' className='selected' />
+            <img
+              src='/images/deposit-item-selected@3x.png'
+              className='selected' />
             <span>Deposit Item</span>
           </a>
         </li>
