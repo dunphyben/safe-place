@@ -20,12 +20,17 @@ var AllItems = React.createClass({displayName: "AllItems",
   render: function() {
     return (
       React.createElement("section", null, 
-        React.createElement("div", null, 
-          React.createElement("input", {
-            type: "text", 
-            value:  this.state.name, 
-            onChange:  AllItemsActions.setName, 
-            placeholder: "New Item"})
+        React.createElement("div", {className: "list-item"}, 
+          React.createElement("div", {className: "item-inner"}, 
+            React.createElement("label", {className: "item-content"}, 
+              React.createElement("input", {
+                type: "text", 
+                className: "field", 
+                value:  this.state.name, 
+                onChange:  AllItemsActions.setName, 
+                placeholder: "New Item"})
+            )
+          )
         ), 
         React.createElement(List, {items:  this.state.items})
       )

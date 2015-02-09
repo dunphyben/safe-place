@@ -20,12 +20,17 @@ var AllItems = React.createClass({
   render: function() {
     return (
       <section>
-        <div>
-          <input
-            type='text'
-            value={ this.state.name }
-            onChange={ AllItemsActions.setName }
-            placeholder='New Item' />
+        <div className='list-item'>
+          <div className='item-inner'>
+            <label className='item-content'>
+              <input
+                type='text'
+                className='field'
+                value={ this.state.name }
+                onChange={ AllItemsActions.setName }
+                placeholder='New Item' />
+            </label>
+          </div>
         </div>
         <List items={ this.state.items }/>
       </section>

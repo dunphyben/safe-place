@@ -8,7 +8,15 @@ var List = React.createClass({displayName: "List",
   render: function() {
 
     var items = this.props.items.map(function(item) {
-      return React.createElement("li", {key:  item.name},  item.name);
+      return (
+        React.createElement("li", {
+          key:  item.name, 
+          className: "list-item"}, 
+          React.createElement("div", {className: "item-inner"}, 
+             item.name
+          )
+        )
+      );
     });
 
     return (

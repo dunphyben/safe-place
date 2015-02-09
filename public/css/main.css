@@ -857,3 +857,15 @@ nav.nav {
 .nav_title p {
   font-size: 1.3em;
 }
+.item-inner {
+  padding: 24px 15px 24px 0;
+  text-align: center;
+  color: #c2b280;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+.item-inner input.field {
+  text-align: center;
+  font-style: italic;
+}
