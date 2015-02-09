@@ -192,6 +192,9 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+button {
+  outline: none;
+}
 .horizontal-menu {
   text-align: center;
 }
@@ -263,9 +266,16 @@ ol {
 #sort-menu {
   background: #073464;
   box-shadow: 0 3px 4px #b3b3b3;
+  position: relative;
+  top: -46px;
+  z-index: 1;
+  -webkit-transition: top 0.2s ease-out;
+  transition: top 0.2s ease-out;
 }
-#sort-menu:after {
-  content: '';
+#sort-menu.open {
+  top: 0;
+}
+#sort-menu .toggle {
   display: block;
   position: absolute;
   bottom: -height;
@@ -274,6 +284,9 @@ ol {
   height: 30px;
   background: #073464;
   border-radius: 0 0 10px 10px;
+  box-shadow: 0 3px 4px #b3b3b3;
+  border: none;
+  cursor: pointer;
 }
 #sort-menu ul {
   display: table;
@@ -305,6 +318,9 @@ nav.nav {
   height: 11.244vh;
   overflow: auto;
   width: 100vw;
+  position: relative;
+  z-index: 2;
+  margin: 0;
 }
 .nav_button {
   display: inline-block;

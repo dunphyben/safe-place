@@ -1,11 +1,19 @@
 navy = #073464
+shadow = 0 3px 4px lighten(black, 70%)
+
 #sort-menu
   background navy
-  box-shadow 0 3px 4px lighten(black, 70%)
+  box-shadow shadow
+  position relative
+  top -46px
+  z-index 1
+  transition top 0.2s ease-out
 
-  &:after
+  &.open
+    top 0
+
+  .toggle
     h = 30px
-    content ''
     display block
     position absolute
     bottom -height
@@ -14,6 +22,9 @@ navy = #073464
     height h
     background navy
     border-radius 0 0 10px 10px
+    box-shadow shadow
+    border none
+    cursor pointer
 
   ul
     display table
