@@ -278,10 +278,10 @@ ol {
 #sort-menu .toggle {
   display: block;
   position: absolute;
-  bottom: -height;
+  bottom: -h;
+  height: 30px;
   right: 10px;
   width: 30px;
-  height: 30px;
   background: #073464;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 3px 4px #b3b3b3;

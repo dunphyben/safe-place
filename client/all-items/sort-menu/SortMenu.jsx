@@ -1,6 +1,11 @@
-var React = require('react');
+var React = require('react'),
+    StateStreamMixin = require('rx-react').StateStreamMixin;
+
+var SortMenuStore = require('./Store.js');
 
 var SortMenu = React.createClass({
+
+  mixins: [StateStreamMixin],
 
   getClassNames: function(i) {
     var selected = this.state.currentlySelected === i;
@@ -11,18 +16,22 @@ var SortMenu = React.createClass({
   },
 
   /**
+   * Initial state.
+   */
+  getStateStream: function() {
+    return SortMenuStore;
+  },
+
+  /**
+   * TODO: 
+   * slideToggle and handleClick should be extracted into actions in ./Action.js
+   */
+
+  /**
    * Slide down the menu.
    */
   slideToggle: function() {
     this.setState({ isOpen: !this.state.isOpen });
-  },
-  
-  getInitialState: function() {
-    return {
-      currentlySelected: '1',
-      sortBy: 'date',
-      isOpen: false
-    };
   },
 
   /**
@@ -48,11 +57,10 @@ var SortMenu = React.createClass({
 
     return (
       <div id="sort-menu" className={classes}>
-        <ul className='horizontal-menu'>
+        <ul className='horizontal-menu table-list'>
           <li>
             <a
               id='1'
-              sortBy='date'
               className={ this.getClassNames('1') }
               onClick={ this.handleClick.bind(this, 'date') }>
               <span>Recent</span>
@@ -61,7 +69,6 @@ var SortMenu = React.createClass({
           <li>
             <a
               id='2'
-              sortBy='alphabetical'
               className={ this.getClassNames('2') }
               onClick={ this.handleClick.bind(this, 'alphabetical') }>
               <span>A-Z</span>
@@ -70,7 +77,6 @@ var SortMenu = React.createClass({
           <li>
             <a
               id='3'
-              sortBy='favorites'
               className={ this.getClassNames('3') }
               onClick={ this.handleClick.bind(this, 'favorites') }>
               <img src='/images/sort-menu/heart-unselected.png' />
@@ -80,7 +86,6 @@ var SortMenu = React.createClass({
           <li>
             <a
               id='4'
-              sortBy='locked'
               className={ this.getClassNames('4') }
               onClick={ this.handleClick.bind(this, 'locked') }>
               <img src='/images/sort-menu/padlock-unselected.png' />

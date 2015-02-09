@@ -1,14 +1,18 @@
-var Store          = require('rx-flux').Store,
-    MenuBarActions = require('./Actions');
+var Store           = require('rx-flux').Store,
+    SortMenuActions = require('./Actions');
 
-var MenuBarStore = Store.create({
+module.exports = Store.create({
 
   /**
    * This works the same as calling getInitialState in a standard react
    * component.
    */
   getInitialValue: function() {
-    return { currentlySelected: '1' };
+    return {
+      currentlySelected: '1',
+      sortBy: 'date',
+      isOpen: false
+    };
   },
 
   /**
@@ -16,7 +20,7 @@ var MenuBarStore = Store.create({
    * instruct the app to change it's global state (i.e. the main app area).
    */
   getOperations: function() {
-    return MenuBarActions
+    return SortMenuActions
       .setSelected
       .map(function(e) {
         return {
@@ -29,5 +33,3 @@ var MenuBarStore = Store.create({
   }
 
 });
-
-module.exports = MenuBarStore;
